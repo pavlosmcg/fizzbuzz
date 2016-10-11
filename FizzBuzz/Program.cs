@@ -10,11 +10,17 @@ namespace FizzBuzz
             string start = Console.ReadLine();
             Console.Write("Please enter an end number: ");
             string end = Console.ReadLine();
-            Console.WriteLine("And the results are:");
 
-            var runner = new FizzBuzzer();
-            runner.Run(start, end);
-            // TODO iterate through results here
+            try
+            {
+                var runner = new FizzBuzzRunner();
+                runner.Run(start, end);
+                // TODO iterate through results here
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
