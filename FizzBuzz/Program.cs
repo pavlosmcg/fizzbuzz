@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FizzBuzz
 {
@@ -13,9 +14,9 @@ namespace FizzBuzz
 
             try
             {
-                var runner = new FizzBuzzRunner();
-                runner.Run(start, end);
-                // TODO iterate through results here
+                var runner = new FizzBuzzRunner(new BasicFizzBuzzRules());
+                foreach (string result in runner.Run(start, end))
+                    Console.WriteLine(result);
             }
             catch (Exception ex)
             {
