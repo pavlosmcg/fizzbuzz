@@ -47,6 +47,7 @@
     <Compile Include="BasicFizzBuzzRules.cs" />
     <Compile Include="FizzBuzzRunner.cs" />
     <Compile Include="IFizzBuzzRules.cs" />
+    <Compile Include="LuckyFizzBuzzRules.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BasicFizzBuzzRulesTests.cs" />
     <Compile Include="FizzBuzzRunnerTests.cs" />
+    <Compile Include="LuckyFizzBuzzRulesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
