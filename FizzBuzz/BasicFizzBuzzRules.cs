@@ -4,10 +4,16 @@
     {
         public string TakeTurn(int input)
         {
-            if (input%3 == 0)
-                return "Fizz";
+            string result = string.Empty;
 
-            return input.ToString();
+            if (input%3 == 0)
+                result += "Fizz";
+            if (input%5 == 0)
+                result += "Buzz";
+
+            return string.IsNullOrEmpty(result)
+                ? input.ToString()
+                : result;
         }
     }
 }

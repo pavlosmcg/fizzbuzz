@@ -30,5 +30,29 @@ namespace FizzBuzzTests
 
             Assert.That(result, Is.EqualTo("Fizz"));
         }
+
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(100)]
+        public void TakeTurn_ReturnsBuzz_WhenInputIsDivisibleByFive(int input)
+        {
+            var unitUnderTest = new BasicFizzBuzzRules();
+
+            var result = unitUnderTest.TakeTurn(input);
+
+            Assert.That(result, Is.EqualTo("Buzz"));
+        }
+
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(450)]
+        public void TakeTurn_ReturnsFizzBuzz_WhenInputIsDivisibleByFive(int input)
+        {
+            var unitUnderTest = new BasicFizzBuzzRules();
+
+            var result = unitUnderTest.TakeTurn(input);
+
+            Assert.That(result, Is.EqualTo("FizzBuzz"));
+        }
     }
 }
