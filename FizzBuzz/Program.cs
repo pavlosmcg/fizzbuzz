@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FizzBuzz
 {
@@ -17,8 +19,13 @@ namespace FizzBuzz
                     new FizzBuzzRunner(
                         new LuckyFizzBuzzRules(
                             new BasicFizzBuzzRules()));
-                foreach (string result in runner.Run(start, end))
-                    Console.WriteLine(result);
+                var results = runner.Run(start, end).ToArray();
+                foreach (string item in results)
+                    Console.WriteLine(item);
+
+                var report = new ResultsReporter().CreateReport(results);
+                foreach (var kvp in report)
+                    Console.WriteLine("{0}: {1}", kvp.Key, kvp.Value);                
             }
             catch (Exception ex)
             {
