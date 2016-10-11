@@ -11,6 +11,9 @@ namespace FizzBuzz
             Console.Write("Please enter an end number: ");
             string end = Console.ReadLine();
             Console.WriteLine("And the results are:");
+
+            var runner = new FizzBuzzer();
+            runner.Run(start, end);
             // TODO iterate through results here
         }
     }
